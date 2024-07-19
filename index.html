@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <header>
+        <button id="toggleButton" class="menu"><i class="fa-solid fa-bars"></i></button>
+        <section class="logo"><i class="fa-brands fa-youtube"></i> YouTube</section>
+
+        <section class="search">
+            <input type="text" placeholder="Buscar" class="search__input">
+            <button class="search__button"><i class="fa fa-magnifying-glass"></i>
+                <div class="tooltip1">Buscar</div>
+            </button>
+        </section>
+
+        <div class="search__perfil">
+            <div class="button-container">
+                <button class="button"><i class="fa-solid fa-video"></i></button>
+                <div class="tooltip">Crear</div>
+            </div>
+            <div class="button-container">
+                <button class="button"><i class="fa-regular fa-bell"></i></button>
+                <div class="tooltip">Notificaciones</div>
+            </div>
+            <div class="button-container">
+                <button class="button"><i class="fa-solid fa-circle-user"></i></button>
+                <div class="tooltip">Perfil</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="contenido">
+
+        <div id="menu__lateral" class="menu__lateral hidden">
+            <button class="menulateral__button menulateral1"><i class="fa-solid fa-house"></i><span class="menu__icon"></span><span class="menu__text"> Inicio</span></button>
+            <button class="menulateral__button menulateral1"><i class="fa-solid fa-film"></i><span class="menu__icon"></span><span class="menu__text"> Shorts</span></button>
+            <button class="menulateral__button menulateral1"><i class="fa-solid fa-ticket"></i><span class="menu__icon"></span><span class="menu__text"> Suscripciones</span></button>
+
+            <button class="menulateral__button menulateral2"><span class="menu__text"> Tú ></span></button>
+            <button class="menulateral__button"><i class="fa-solid fa-image-portrait"></i><span class="menu__icon"></span><span class="menu__text"> Tu canal</span></button>
+            <button class="menulateral__button"><i class="fa-solid fa-rotate-right"></i><span class="menu__icon"></span><span class="menu__text"> Historial</span></button>
+            <button class="menulateral__button"><i class="fa-solid fa-list"></i><span class="menu__icon"></span><span class="menu__text"> Lista de reproducciones</span></button>
+            <button class="menulateral__button"><i class="fa-solid fa-play"></i><span class="menu__icon"></span><span class="menu__text"> Mis videos</span></button>
+            <button class="menulateral__button"><i class="fa-solid fa-rotate"></i><span class="menu__icon"></span><span class="menu__text"> Ver mas tarde</span></button>
+
+            <button class="menulateral__button menulateral3"><span class="menu__text"> Suscripciones</span></button>
+            <button class="menulateral__button"><i class="fa-regular fa-circle-user"></i><span class="menu__icon"></span><span class="menu__text"> Dalto</span></button>
+            <button class="menulateral__button"><i class="fa-regular fa-circle-user"></i><span class="menu__icon"></span><span class="menu__text"> Misfist</span></button>
+            <button class="menulateral__button"><i class="fa-regular fa-circle-user"></i><span class="menu__icon"></span><span class="menu__text"> Bad Bunny</span></button>
+            <button class="menulateral__button"><i class="fa-regular fa-circle-user"></i><span class="menu__icon"></span><span class="menu__text"> Wild Project</span></button>
+
+            <button class="menulateral__button menulateral3"><span class="menu__text"> Explorar</span></button>
+            <button class="menulateral__button"><i class="fa-solid fa-fire"></i><span class="menu__icon"></span><span class="menu__text"> Tedencias</span></button>
+            <button class="menulateral__button"><i class="fa-solid fa-music"></i><span class="menu__icon"></span><span class="menu__text"> Música</span></button>
+            <button class="menulateral__button"><i class="fa-solid fa-clapperboard"></i><span class="menu__icon"></span><span class="menu__text"> Películas</span></button>
+            <button class="menulateral__button"><i class="fa-solid fa-signal"></i><span class="menu__icon"></span><span class="menu__text"> En directo</span></button>
+            <button class="menulateral__button"><i class="fa-solid fa-gamepad"></i><span class="menu__icon"></span><span class="menu__text"> Videojuegos</span></button>
+            <button class="menulateral__button"><i class="fa-regular fa-newspaper"></i><span class="menu__icon"></span><span class="menu__text"> Noticias</span></button>
+            <button class="menulateral__button"><i class="fa-solid fa-medal"></i><span class="menu__icon"></span><span class="menu__text"> Deportes</span></button>
+            <button class="menulateral__button"><i class="fa-regular fa-lightbulb"></i><span class="menu__icon"></span><span class="menu__text"> Aprendizaje</span></button>
+            <button class="menulateral__button"><i class="fa-regular fa-lightbulb"></i><span class="menu__icon"></span><span class="menu__text"> Podcast</span></button>
+
+            <button class="menulateral__button menulateral3"><span class="menu__text"> Más de YouTube</span></button>
+            <button class="menulateral__button"><i class="fa-regular fa-circle-user"></i><span class="menu__icon"></span><span class="menu__text"> YouTube Premium</span></button>
+            <button class="menulateral__button"><i class="fa-regular fa-circle-user"></i><span class="menu__icon"></span><span class="menu__text"> YouTube Music</span></button>
+            <button class="menulateral__button"><i class="fa-regular fa-circle-user"></i><span class="menu__icon"></span><span class="menu__text"> YouTube Studio</span></button>
+            <button class="menulateral__button"><i class="fa-regular fa-circle-user"></i><span class="menu__icon"></span><span class="menu__text"> YouTube Kids</span></button>
+        </div>
+
+        <div class="videos">
+            <div class="categorias">
+                <button>Todo</button>
+                <button>Música</button>
+                <button>Podcast</button>
+                <button>Videojuegos</button>
+                <button>Noticias</button>
+                <button>Entrevistas</button>
+                <button>Actualidad</button>
+            </div>
+        </div>    
+
+        <div class="video-content">
+            <div class="video">
+                <img src="https://i.ytimg.com/vi/Cpg4gUqU77I/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAJWumj_wd2AaHUJSsK5C1ND_Hm8A.png" alt="">
+                <h3>Mix: canciones Kidd keo</h3>
+                <h5>Más de este canal para tí</h5>
+            </div>
+    
+            <div class="video">
+                <img src="https://i.ytimg.com/vi/-SLLe5qmg-Q/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLA3wDrjt-W_E3PNYFGQOMtKNRZDtw" alt="">
+                <h3><i class="fa-regular fa-circle-user"></i> Título del video</h3>
+                <h5>Nombre del canal</h5>
+                <h5> Visualizaciones · Fecha de subida</h5>
+            </div>
+    
+            <div class="video">
+                <img src="https://i.ytimg.com/vi/CZ-7szzTbz8/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDvtNe_tpnt-vFo7POf_ExYP4Wdug" alt="">
+                <h3><i class="fa-regular fa-circle-user"></i> Título del video</h3>
+                <h5>Nombre del canal</h5>
+                <h5> Visualizaciones · Fecha de subida</h5>
+            </div>
+    
+            <div class="video">
+                <img src="https://i.ytimg.com/vi/NzUF6B0jW2w/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmHGrSLGf_BaWsf6Paq9P8YYEMGw" alt="">
+                <h3><i class="fa-regular fa-circle-user"></i> Título del video</h3>
+                <h5>Nombre del canal</h5>
+                <h5> Visualizaciones · Fecha de subida</h5>
+            </div>
+    
+            <div class="video">
+                <img src="https://i.ytimg.com/vi/KIeWkPIgjL8/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCVk3bt2Bpsuzo-hEWX0JcUa7vnZg" alt="">
+                <h3><i class="fa-regular fa-circle-user"></i> Título del video</h3>
+                <h5>Nombre del canal</h5>
+                <h5> Visualizaciones · Fecha de subida</h5>
+            </div>
+    
+            <div class="video">
+                <img src="https://i.ytimg.com/vi/8onM1VDoTSs/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC5-OEpjFDmBx82PeCivS1uV8N4oA" alt="">
+                <h3><i class="fa-regular fa-circle-user"></i> Título del video</h3>
+                <h5>Nombre del canal</h5>
+                <h5> Visualizaciones · Fecha de subida</h5>
+            </div>
+            <div class="video">
+                <img src="https://i.ytimg.com/vi/U9COCOvlsIU/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDZT5PNfK5C77g8BfdqDWBj03M3jg" alt="">
+                <h3><i class="fa-regular fa-circle-user"></i> Título del video</h3>
+                <h5>Nombre del canal</h5>
+                <h5> Visualizaciones · Fecha de subida</h5>
+            </div>
+    
+            <div class="video">
+                <img src="https://i.ytimg.com/vi/vcVd-arTVFw/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLB_tnLHdMYOAnUQrIjvM6XPPiKVIQ" alt="">
+                <h3><i class="fa-regular fa-circle-user"></i> Título del video</h3>
+                <h5>Nombre del canal</h5>
+                <h5> Visualizaciones · Fecha de subida</h5>
+            </div>
+    
+            <div class="video">
+                <img src="https://i.ytimg.com/vi/EpWunIBoxRc/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLA3ZY2tFuidfAN8RiKLvdVUSNfTQA" alt="">
+                <h3><i class="fa-regular fa-circle-user"></i> Título del video</h3>
+                <h5>Nombre del canal</h5>
+                <h5> Visualizaciones · Fecha de subida</h5>
+            </div>
+        </div>
+    
+    </section>
+
+<script src="js/all.min.js"></script>
+<script src="codigo.js" ></script>
+</body>
+</html>
