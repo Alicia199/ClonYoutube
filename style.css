@@ -11,6 +11,7 @@ body {
 }
 header{
     max-width: 2570px;
+    min-width: 320px;
     background-color: white;
     display: flex;
     width: 100%;
@@ -218,7 +219,7 @@ header{
     margin-bottom: 20px;
 }
 .menulateral__button:hover{
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
     background-color: #e4e3e3;
 }
 .menu__icon {
@@ -245,36 +246,56 @@ header{
     display: flex;
     flex-direction: column;
     padding: 20px;
-    align-items: center; /* Centra los elementos horizontalmente */
+    align-items: center;
 }
 .categorias {
     display: flex;
-    gap: 6px;
     margin: 40px auto 20px 15px;
-    padding: 5px;
+    padding: 5px 0 8px 0;
     justify-content: center;
     position: fixed;
     background-color: white;
     z-index: 2;
     left: 15.4vw; /* Espacio cuando el menú no está minimizado */
-    max-width: 100vw;
+    right: 10px;
+    max-width: 2570px;
+    min-width: 320px;
     flex: 1;
-    width: calc(100% - 15.4vw); /* Ajusta el ancho para que no se desborde */
     box-sizing: border-box;
 }
+.categorias-wrapper {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: calc(100% - 80px);
+    gap: 6px;
+}
 .menu__lateral.minimized ~ .categorias {
-    width: 100%;
-    left: 2px;
+    left: 2px; /* Alinea al borde izquierdo cuando el menú está minimizado */
+    width: calc(100% - 10px); /* Ajusta el ancho para que no se desborde */
+    right: 20px; /* Espacio a la derecha */
 }
 .categorias button {
     border: none;
     border-radius: 10px;
     margin-top: 1px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     padding: 9px 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
+}
+button.prev, button.next {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+.categorias .prev:hover, .categorias .next:hover {
+    border-radius: 20px;
+    background-color: #e4e3e3;
+    color: black;
 }
 .categorias button:hover {
     background-color: black;
@@ -286,8 +307,8 @@ header{
     gap: 14px;
     margin: 0;
     padding: 10px;
-    flex: 1;
-    flex-grow: 1;
+    flex-basis: 0;
+    flex-grow: 999;
     z-index: 1;
     height: calc(100vh - 150px);
     max-width: calc(100% - 15vw);
@@ -295,7 +316,8 @@ header{
     margin-top: 80px;
 }
 .menu__lateral.minimized ~ .video-content {
-    margin-left: 20px;
+    margin-left: 70px;
+    max-width: calc(100% - 60px); /* Ajuste del ancho */
 }
 .video {
     padding: 10px;
@@ -324,14 +346,20 @@ header{
 }
 @media(max-width: 1200px){
     .categorias {
-        left: 10vw;
-        width: 100%;
+        left: 16vw;
         padding: 0 10px;
+        right: 10px;
+        width: calc(100% - 10px); /* Ajusta el ancho para pantallas pequeñas */
+    }
+    .menu__lateral.minimized ~ .categorias {
+        left: 5px; /* Alinea al borde izquierdo cuando el menú está minimizado */
+        width: calc(100% - 20px); /* Ajusta el ancho para que no se desborde */
+        right: 20px; /* Espacio a la derecha */
     }
     .video-content{
         grid-template-columns: repeat(2, 1fr);
         margin: 10px 0 0 18%;
-        padding-top: calc(80px + 5px);
+        padding-top: calc(90px + 5px);
     }
 }
 @media (max-width: 800px) {
@@ -339,17 +367,18 @@ header{
         width: 20px;
     }
     .categorias {
-        left: 10vw;
-        width: 100%;
+        left: 15vw;
         padding: 0 10px;
+        right: 10px;
+        width: calc(100% - 20px); /*Ajusta el ancho para pantallas pequeñas */
     }
-    .video-content {
-        grid-template-columns: 1fr;
+    .video-content{
+        grid-template-columns: repeat(2, 1fr);
         margin: 10px 0 0 18%;
         padding-top: calc(80px + 5px);
     }
 }
-@media (max-width: 588px) {
+@media (max-width: 425px) {
     .menu__lateral.minimized{
         display: none;
     }
@@ -365,11 +394,12 @@ header{
     }
     .categorias {
         left: 10vw;
-        width: 100%;
-        right: 10vw;
+        padding: 0 10px;
+        left: 10px;
+        right: 10px;
+        width: calc(100% - 20px); /* Ajusta el ancho para pantallas pequeñas */
     }
     .video-content {
-        width: 100%;
         grid-template-columns: 1fr;
         margin: 10px 0 0 0;
         padding-top: calc(80px + 5px);
