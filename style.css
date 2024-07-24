@@ -143,7 +143,7 @@ header{
 }
 .contenido{
     display: grid;
-}
+} 
 .menu__lateral {
     position: fixed;
     max-width: 15vw;
@@ -167,14 +167,14 @@ header{
     overflow-y: auto; /* Muestra el scrollbar */
 }
 .menu__lateral.minimized {
-    width: 20px;
-    padding: 20px;
-    padding-top: 50px;
-    margin-right: 20px;
-    margin-left: 20px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    max-width: 70px;
+    margin-top: 50px;
+    padding: 0;
+    position: fixed;
+    align-content: center;
+    justify-content: space-evenly;
+    display: grid;
+    
 }
 .menu__lateral .menu__icon {
     margin-right: 10px;
