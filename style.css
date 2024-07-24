@@ -331,6 +331,7 @@ button.prev, button.next {
 @media(max-width: 768px){
     .search__input,.search__button{
         max-width: 90px;
+        justify-content: center;
     }
 }
 @media(max-width: 425px){
@@ -338,6 +339,7 @@ button.prev, button.next {
         display: none;
     }
     .search__button{
+        margin-right: 90px;
         justify-content: center;
         border-radius: 20px;
     }
