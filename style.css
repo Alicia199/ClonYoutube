@@ -289,7 +289,6 @@ button.prev, button.next {
     flex-basis: 0;
     flex-grow: 999;
     z-index: 1;
-    height: calc(100vh - 150px);
     max-width: calc(100% - 15vw);
     margin-left: 200px;
     margin-top: 80px;
