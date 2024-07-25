@@ -174,7 +174,6 @@ header{
     align-content: center;
     justify-content: space-evenly;
     display: grid;
-    
 }
 .menu__lateral .menu__icon {
     margin-right: 10px;
@@ -228,7 +227,8 @@ header{
     font-weight: bold;
 }
 .categorias {
-    width: auto;
+    width: 100%;
+    padding-left: 250px;
     display: flex;
     flex-direction: row;
     white-space: nowrap;
@@ -250,9 +250,8 @@ header{
     gap: 6px;
 }
 .menu__lateral.minimized ~ .categorias {
-    left: 2px; /* Alinea al borde izquierdo cuando el menú está minimizado */
-    width: calc(100% - 10px); /* Ajusta el ancho para que no se desborde */
-    right: 20px; /* Espacio a la derecha */
+    padding: 0%;
+    
 }
 .categorias button {
     border: none;
@@ -260,13 +259,13 @@ header{
     margin-top: 1px;
     font-size: 12px;
     font-weight: bold;
-    padding: 9px 10px;
+    padding: 9px;
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
 button.prev, button.next {
     background: white;
-    padding: 10px 15px;
+    padding: 10px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 1.5em;
@@ -321,6 +320,10 @@ button.prev, button.next {
 @media(max-width: 850px){
     .menu__lateral{
         display: none;
+    }
+    .categorias{
+        width: 100%;
+        padding-left: 0;
     }
     .video-content {
         margin-left: 0;
