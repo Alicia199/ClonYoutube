@@ -250,8 +250,7 @@ header{
     gap: 6px;
 }
 .menu__lateral.minimized ~ .categorias {
-    padding: 0%;
-    
+    padding: 0%;  
 }
 .categorias button {
     border: none;
