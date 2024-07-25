@@ -276,6 +276,9 @@ button.prev, button.next {
     color: black;
 }
 .categorias button:hover {
+    background-color: #e4e3e3;
+}
+.categorias button:focus {
     background-color: black;
     color: white;
 }
