@@ -167,12 +167,13 @@ header{
     overflow-y: auto; /* Muestra el scrollbar */
 }
 .menu__lateral.minimized {
-    max-width: 70px;
-    margin-top: 50px;
+    width: 90px;
+    height: 250px;
     padding: 0;
     position: fixed;
-    align-content: center;
-    justify-content: space-evenly;
+    align-content: space-evenly;
+    justify-content: center;
+    align-items: flex-start;
     display: grid;
 }
 .menu__lateral .menu__icon {
@@ -231,7 +232,7 @@ header{
 }
 .categorias {
     width: 100%;
-    padding-left: 250px;
+    padding-left: 220px;
     display: flex;
     flex-direction: row;
     white-space: nowrap;
@@ -253,7 +254,8 @@ header{
     gap: 6px;
 }
 .menu__lateral.minimized ~ .categorias {
-    padding: 0%;  
+    padding: 0%; 
+    padding-left: 90px;
 }
 .categorias button {
     border: none;
@@ -333,7 +335,7 @@ button.prev, button.next {
 }
 .menu__lateral.minimized ~ .video-content {
     margin-left: 70px;
-    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(340px,1fr));
 }
 @media(min-width: 1024px) and (max-width: 1980px) {
     .video-content {
