@@ -8,7 +8,7 @@ header{
     display: flex;
     position: fixed;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 10px;
     z-index: 2;
@@ -358,10 +358,13 @@ button.prev, button.next {
 @media(max-width: 768px){
     .search__input,.search__button{
         max-width: 90px;
-        justify-content: center;
+        justify-content: space-between;
+    }
+    .search__perfil{
+        justify-content: space-between;
     }
 }
-@media(max-width: 425px){
+@media(max-width: 550px){
     .search__input{
         display: none;
     }
