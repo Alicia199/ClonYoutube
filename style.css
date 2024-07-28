@@ -197,6 +197,9 @@ header{
     display: flex;
     align-items: center;
 }
+.menu__lateral .fa-youtube{
+    font-size: 15px;
+}
 .menu__lateral.minimized .menulateral__button {
     justify-content: center;
     font-size: 19px; 
@@ -321,6 +324,22 @@ button.prev, button.next {
     color: rgb(116, 115, 115);
     font-family: arial;
     text-align: left;
+}
+@media(min-width: 1980px) {
+    .video-content {
+        grid-template-columns: repeat(auto-fill,minmax(340px,1fr));
+        margin-right: 0;
+    }
+}
+.menu__lateral.minimized ~ .video-content {
+    margin-left: 70px;
+    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+}
+@media(min-width: 1024px) and (max-width: 1980px) {
+    .video-content {
+        grid-template-columns: repeat(3, 1fr);
+        margin-right: 0;
+    }
 }
 @media(max-width: 850px){
     .menu__lateral{
