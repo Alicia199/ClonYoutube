@@ -267,7 +267,17 @@ header{
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
+button.prev {
+    left: 0;
+}
+button.next {
+    right: 0;
+}
+button.hidden {
+    display: none;
+}
 button.prev, button.next {
+    position: relative;
     background: white;
     padding: 10px;
     border-radius: 20px;
