@@ -248,7 +248,7 @@ header{
 .categorias-wrapper {
     white-space: nowrap;
     flex-direction: row;
-    overflow-x: hidden;
+    overflow: hidden;
     scroll-behavior: smooth;
     width: calc(100% - 80px);
     gap: 6px;
