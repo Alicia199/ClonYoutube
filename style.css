@@ -179,11 +179,9 @@ header{
 .menu__lateral .menu__icon {
     margin-right: 10px;
 }
-
 .menu__lateral.minimized .menu__text {
     display: none;
 }
-
 .menu__lateral.minimized .menulateral__button:nth-child(n+4) {
     display: none;
 }
@@ -267,22 +265,17 @@ header{
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
-button.prev {
-    left: 0;
-}
-button.next {
-    right: 0;
+.next .prev {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    align-items: center;
+    background-color: white;
 }
 button.hidden {
     display: none;
-}
-button.prev, button.next {
-    position: relative;
-    background: white;
-    padding: 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1.5em;
 }
 .categorias .prev:hover, .categorias .next:hover {
     border-radius: 20px;
@@ -355,16 +348,48 @@ button.prev, button.next {
 }
 @media(max-width: 850px){
     .menu__lateral{
+        max-width: 50vw;
+        top: 60px;
+        bottom: 0; 
+        left: 0;
+        background-color: white;
+        font-size: 12px;
+        padding: 10px;
+        transition: width 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        overflow-x: hidden;
+        scrollbar-width:thin;
+        z-index: 7;
+        position: fixed;
         display: none;
+    }
+    .menu__lateral.minimized{
+        display: none;
+    }
+    .menu__lateral.visible {
+        display: grid; /* Muestra el menú cuando tenga la clase 'visible' */
+    }
+    .menu__lateral.minimized ~ .video-content {
+        margin-left: 0;
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     }
     .categorias{
         width: 100%;
+        padding-left: 0;
+    }
+    .menu__lateral.minimized ~ .categorias {
+        padding: 0%; 
         padding-left: 0;
     }
     .video-content {
         margin-left: 0;
         max-width: 100%;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        transition: opacity 0.3s ease; 
+    }
+    .video-content.dimmed {
+        opacity: 0.1; 
+        pointer-events: none; /* Desactiva la interacción */
     }
 }
 @media(max-width: 768px){
