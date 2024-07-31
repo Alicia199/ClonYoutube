@@ -347,6 +347,10 @@ button.hidden {
     }
 }
 @media(max-width: 850px){
+    .search__input,.search__button{
+        max-width: 150px;
+        justify-content: space-between;
+    }
     .menu__lateral{
         max-width: 50vw;
         top: 60px;
