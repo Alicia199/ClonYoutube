@@ -100,7 +100,10 @@ header{
     border-radius: 20px 0px 0px 20px; 
     margin: 0;
     height: 40px;
-    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+    box-sizing: border-box;
+}
+.search__input:focus{
+    outline: none;
 }
 .search__button {
     border: 1px solid rgb(148, 146, 146);
@@ -404,7 +407,7 @@ button.hidden {
     .search__perfil{
         justify-content: space-between;
     }
-}
+} 
 @media(max-width: 550px){
     .search__input{
         display: none;
